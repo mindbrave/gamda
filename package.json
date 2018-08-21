@@ -1,20 +1,36 @@
 {
   "name": "gamda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Functional, declarative game engine.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test",
+    "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mindbrave/gamda.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["gamda", "game", "engine", "functional", "declarative", "framework", "physics"],
+  "author": "Rafał Łużyński",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mindbrave/gamda/issues"
   },
-  "homepage": "https://github.com/mindbrave/gamda#readme"
+  "homepage": "https://github.com/mindbrave/gamda#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/jest": "^23.3.1",
+    "chai": "^4.1.2",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "@types/ramda": "^0.25.36",
+    "ramda": "^0.25.0"
+  }
 }
