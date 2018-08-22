@@ -1,20 +1,28 @@
 {
   "name": "gamda",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Functional, declarative game engine.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
     "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mindbrave/gamda.git"
   },
-  "keywords": ["gamda", "game", "engine", "functional", "declarative", "framework", "physics"],
+  "keywords": [
+    "gamda",
+    "game",
+    "engine",
+    "functional",
+    "declarative",
+    "framework",
+    "physics"
+  ],
   "author": "Rafał Łużyński",
   "license": "MIT",
   "bugs": {
