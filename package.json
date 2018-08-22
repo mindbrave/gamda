@@ -6,8 +6,7 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test",
+    "prepublish": "npm test && npm run build",
     "test": "jest --config jestconfig.json"
   },
   "repository": {

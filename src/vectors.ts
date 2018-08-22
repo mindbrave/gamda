@@ -21,12 +21,11 @@ export const subtractVectors = (v1: Vec) => (v2: Vec): Vec => ({
     z: v1.z - v2.z,
 });
 
-type scaleVector = (factor: number) => (v: Vec) => Vec;
-export const scaleVector: scaleVector = factor => evolve({
+export const scaleVector = (factor: number) => (v: Vec): Vec => evolve({
     x: multiply(factor),
     y: multiply(factor),
     z: multiply(factor),
-});
+}, v);
 
 export const vectorMagnitude = (v: Vec): number => Math.sqrt(v.x ** 2 + v.y ** 2 + v.z ** 2);
 
